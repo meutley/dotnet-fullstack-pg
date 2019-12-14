@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service\SourceName.Service.csproj" />
+    <ProjectReference Include="..\Service.Model\SourceName.Service.Model.csproj" />
+    <ProjectReference Include="..\Data\SourceName.Data.csproj" />
+    <ProjectReference Include="..\Data.Model\SourceName.Data.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

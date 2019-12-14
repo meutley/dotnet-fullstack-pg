@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Matt Utley",
+    "classifications": [
+        "Common",
+        "Code"
+    ],
+    "identity": "meutley.fullstack.pg.web",
+    "name": ".NET Core 3.0 full-stack web API with PostgreSQL",
+    "shortName": "fullstack-pg",
+    "sourceName": "SourceName",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "postActions": [
+    {
+      	"condition": "(!skipRestore)",
+      	"description": "Restore NuGet packages required by this project.",
+      	"manualInstructions": [
+		{ "text": "Run 'dotnet restore'" }
+      	],
+      		"actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+		"continueOnError": true
+        }
+    ],
+    "guids": [
+        "D635B63F-713D-4875-9FF2-7842E40CB1A4",
+	"15C6069A-6F50-4047-9E6C-631EC82B46DB",
+	"439F8C5E-A020-4BFA-A1E0-7122F51D68E2",
+	"14770404-2F89-402E-814F-ACF332EAFCBD",
+	"271312E1-EC0A-4B6A-90CA-1E9584A540CB",
+	"4275C319-AB35-4581-A59E-28F344070F47",
+	"4D85BF1A-17B8-4A63-8983-312B828D5B05",
+	"ABD9C139-B350-4B87-9A0E-C5FAF048061A",
+	"E6DA9545-92A4-41C3-AF7E-742768694A6C",
+	"AFCE406A-B437-4C70-99EC-50749383DF65"
+    ],
+    "symbols": {
+        "DbName": {
+            "type": "parameter",
+            "replaces": "DatabaseName",
+            "FileRename": "DatabaseName",
+            "isRequired": true
+        }
+    }
+}
