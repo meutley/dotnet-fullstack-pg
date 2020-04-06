@@ -17,22 +17,11 @@ namespace SourceName.Service.Implementation.Users
             }
         }
 
-        public List<int> RoleIds { get; set; } = new List<int>();
-
         public void SetCurrentUserId(string userId)
         {
             _userId = !string.IsNullOrWhiteSpace(userId)
                         ? int.Parse(userId)
                         : (int?)null;
-        }
-
-        public void SetUserRoleIds(string roleIds)
-        {
-            RoleIds.Clear();
-            if (!string.IsNullOrWhiteSpace(roleIds))
-            {
-                RoleIds.AddRange(roleIds.Split(",").Select(int.Parse));
-            }
         }
     }
 }

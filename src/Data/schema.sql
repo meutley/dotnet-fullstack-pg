@@ -34,7 +34,6 @@ GRANT TEMPORARY, CONNECT ON DATABASE DatabaseName TO PUBLIC;
 
 CREATE TABLE application_user (
     id              SERIAL       PRIMARY KEY,
-    department_id   INT          NOT NULL,
     first_name      VARCHAR(50)  NOT NULL,
     last_name       VARCHAR(50)  NOT NULL,
     username        VARCHAR(255) NOT NULL,

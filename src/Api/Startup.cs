@@ -13,7 +13,6 @@ using Microsoft.IdentityModel.Tokens;
 using AutoMapper;
 
 using SourceName.Api.Core.Authentication;
-using SourceName.Api.Core.Authorization;
 using SourceName.Api.Core.Filters;
 using SourceName.Api.Model.Configuration;
 using SourceName.DependencyInjection;
@@ -79,9 +78,6 @@ namespace SourceName.Api
                 new ServiceModule(),
                 new DataModule(Configuration.GetConnectionString("SourceNameDatabase"))
             }.ForEach(module => module.RegisterDependencies(services));
-
-            // Authorization handlers
-            services.AddScoped<IAuthorizationHandler, AdminHandler>();
 
             // API services
             services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();

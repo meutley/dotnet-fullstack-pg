@@ -9,7 +9,6 @@ using AutoMapper;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-using SourceName.Api.Core.Authorization;
 using SourceName.Api.Model.Configuration;
 using SourceName.Service.Users;
 

@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc.Filters;
 
-using SourceName.Api.Core.Authorization;
 using SourceName.Service.Users;
 
 namespace SourceName.Api.Core.Filters
@@ -27,9 +26,6 @@ namespace SourceName.Api.Core.Filters
             {
                 var userIdClaim = claimsIdentity.Claims.SingleOrDefault(c => c.Type == ClaimTypes.Name);
                 _userContextService.SetCurrentUserId(userIdClaim?.Value);
-
-                var claimRoleIds = claimsIdentity.Claims.SingleOrDefault(c => c.Type == SourceNameClaimTypes.ApplicationRoles);
-                _userContextService.SetUserRoleIds(claimRoleIds?.Value);
             }
 
             var resultContext = await next();
